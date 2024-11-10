@@ -1,6 +1,6 @@
 name: Build and Deploy Dockerized Python App on EC2
 
-'on':
+on:
   push:
     branches:
       - main
