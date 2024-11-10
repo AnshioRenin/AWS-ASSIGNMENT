@@ -8,6 +8,7 @@ on:
 env:
   EC2_USER: ec2-user
   EC2_HOST: 52.213.125.245
+  EC2_HOST_IP: 18.200.249.41
   SSH_KEY: ${{ secrets.EC2_SSH_KEY }}
   DOCKER_IMAGE: my-python-app:${{ github.sha }}
   CONTAINER_NAME: my-python-container
@@ -39,7 +40,7 @@ jobs:
       - name: Add EC2's Public IP to known hosts
         run: |
           mkdir -p ~/.ssh
-          ssh-keyscan -H "${{ env.EC2_HOST }}" > ~/.ssh/known_hosts
+          ssh-keyscan -H "${{ env.EC2_HOST_IP }}" > ~/.ssh/known_hosts
 
       - name: Run Ansible Playbook to install docker and other packages onto EC2 instance
         working-directory: Ansible
