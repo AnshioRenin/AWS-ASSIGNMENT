@@ -8,7 +8,7 @@ on:
 env:
   EC2_USER: ec2-user
   EC2_HOST: 52.213.125.245
-  EC2_HOST_IP: 18.200.249.41
+  EC2_HOST_IP: 34.245.199.23
   SSH_KEY: ${{ secrets.EC2_SSH_KEY }}
   DOCKER_IMAGE: my-python-app:${{ github.sha }}
   CONTAINER_NAME: my-python-container
