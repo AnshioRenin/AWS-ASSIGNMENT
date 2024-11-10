@@ -1,5 +1,5 @@
-# NETWORKS_LAB
-# Networkslab-assignment: Docker Installation on EC2 using Ansible
+# NETWORKS_ASSIGNMENT
+# Networks-assignment: Docker Installation on EC2 using Ansible
 
 This project demonstrates how to use Ansible with GitHub Actions to configure an AWS EC2 instance by installing Docker and setting up dependencies. The setup is automated through a CI/CD pipeline that triggers on pushes to the main branch.
 
