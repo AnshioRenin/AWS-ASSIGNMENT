@@ -37,6 +37,10 @@ jobs:
           echo "${{ secrets.EC2_SSH_KEY }}" > ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa
         
+      - name: Connect to EC2 Instance
+        run: |
+          ssh -i "${{ secrets.EC2_SSH_KEY }}" -o StrictHostKeyChecking=no ${{ env.EC2_USER }}@${{ env.EC2_HOST_IP }}
+
       - name: Add EC2's Public IP to known hosts
         run: |
           mkdir -p ~/.ssh
